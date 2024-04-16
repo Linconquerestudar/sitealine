@@ -1,0 +1,106 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+
+    background-color: #9918cc;
+}
+
+.card {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+
+    max-width: 480px; height: 480px; margin: 0px; width: 480px;
+
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.2);
+}
+
+.card > .question p {
+    position: none;
+    font-size: 25px;
+    font-family: sans-serif;
+    font-weight: 490;
+    margin-left: 20px;
+    margin-bottom: 30px;
+
+}
+.card p {
+margin-left: 40px;
+}
+
+.card >.question img {
+position: relative;
+margin-left: 110px;
+margin-bottom: 20px;
+}
+
+/* Estilo para a caixa de marcação */
+.checkbox-container {
+    display: inline-block;
+    position: relative;
+    margin-right: 15px;
+    margin-left: 10px;
+    margin-bottom: 15px;
+}
+
+.checkbox-custom {
+    width: 25px;
+    height: 25px;
+    background-color: #fff;
+    border: 2px solid #007bff;
+    border-radius: 5px;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.checkbox-custom::after {
+    content: '';
+    width: 15px;
+    height: 7px;
+    border: solid #007bff;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+    position: absolute;
+    top: 4px;
+    left: 7px;
+    opacity: 0;
+}
+
+.checkbox-container input[type="checkbox"]:checked + .checkbox-custom::after {
+    opacity: 1;
+}
+
+.checkbox-label {
+    font-size: 16px;
+    color: #333;
+    cursor: pointer;
+    padding-left: 35px;
+    text-decoration: none;
+}
+
+/* Estilo para o botão */
+#meuBotao {
+    margin-left: 130px;
+    width: 200px;
+    padding: 10px 15px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#meuBotao:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
